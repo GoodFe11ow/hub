@@ -102,7 +102,7 @@
             </div>   
         </nav>
     </div>
-    <div class=" fixed inset-0 flex flex-col items-center justify-center mb-[500px] mr-[700px]  text-white">
+    <div class=" fixed z-0 inset-0 flex flex-col items-center justify-center mb-[500px] mr-[700px]  text-white">
         <h1 class="text-5xl font-bold" style="text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.9);">Majutus</h1>
         <a class="mr-[80px] mt-[10px]" style="text-shadow: 1px 1px 0px rgb(0, 0, 0, 0.9);" href="">Vaata lisaks <i class="fas fa-arrow-right"></i></a>
     </div>
@@ -146,8 +146,18 @@
                 </a>
             </div>
         </div>
-        <div class="mx-auto m-5 flex justify-center overflow-hidden w-[1120px] h-[400px] rounded-xl">
-            <img src="https://visitsaaremaa.ee/wp-content/uploads/2022/12/Liitu-visit-saaremaa-uudiskirjaga-scaled.jpg" class="object-cover w-full h-full transition duration-1000 ease-in-out hover:scale-125">
+        <div class="relative mx-auto m-5 flex justify-center overflow-hidden w-[1120px] h-[400px] rounded-xl group">
+            <img src="https://visitsaaremaa.ee/wp-content/uploads/2022/12/Liitu-visit-saaremaa-uudiskirjaga-scaled.jpg" class="object-cover w-full h-full transition duration-1000 ease-in-out group-hover:scale-125">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50"></div>
+            <span class="absolute bottom-8 left-8 text-white text-[25px] font-semibold px-2 py-1 rounded opacity-80">Liitu uudiskirjaga</span>
+            <div class="absolute block">
+                <form class=" pt-10">
+                    <label class="" for="username"><span class="text-white font-bold flex justify-center mb-[-20px] ">Sinu nimi</span><br><input class="p-[10px] w-[360px]" type="text" id="username"></label><br>
+                    <label for="email"><span class="text-white font-bold flex justify-center mb-[-20px] pt-4">Sinu e-mail</span><br><input class="p-[10px] w-[360px]" type="email" id="email"></label><br>
+                    <input class="mt-10 ml-7" type="checkbox"><span class="text-white pl-2 text-[14px]">Olen tutvunud <a href="" class="underline underline-offset-2">andmetöötluse põhimõtetega</a></span><br>
+                    <button class="text-white border-gray-700 bg-pink-400">Liitun uudiskirjaga</button>
+                </form>
+            </div>
         </div>
         <div class="mt-[40px] mx-auto flex justify-center space-x-[20px] w-[1120px] h-[72px]">
             <a href="">
